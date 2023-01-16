@@ -3,7 +3,9 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String, Float, ForeignKey
 from sqlalchemy.orm import relationship, sessionmaker
 
-SQLALCHEMY_DATABASE_URL = "postgresql://ylab_user:qwe123@localhost/ylab_dz"
+from config import DB_URL
+
+SQLALCHEMY_DATABASE_URL = DB_URL
 
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 
